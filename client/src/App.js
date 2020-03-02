@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { getAllPlayers } from 'api/playersApi';
+
 function App() {
+  useEffect(() => {
+    getAllPlayers().then(players => console.log(players));
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
