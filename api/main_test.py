@@ -13,7 +13,7 @@ client = TestClient(app)
 
 class MainTests(unittest.TestCase):
     def setUp(self):
-        db._seed_test_data()
+        db._seed_db()
 
     def test_index(self):
         resp = client.get('/')
@@ -27,7 +27,7 @@ class MainTests(unittest.TestCase):
         self.assertTrue(len(body) > 0)
 
     def test_get_player(self):
-        test_player = db._test_data[0]
+        test_player = db._seed_data[0]
         resp = client.get(f'/players/{test_player.id}')
         self.assertEqual(HTTP_200_OK, resp.status_code)
         body = resp.json()
@@ -72,7 +72,7 @@ class MainTests(unittest.TestCase):
         self.assertEqual(HTTP_422_UNPROCESSABLE_ENTITY, resp.status_code)
 
     def test_update_player(self):
-        test_player = db._test_data[0]
+        test_player = db._seed_data[0]
         payload = {
             'id': str(test_player.id),
             'first_name': test_player.first_name,
@@ -88,7 +88,7 @@ class MainTests(unittest.TestCase):
 
 
     def test_update_player_invalid_score(self):
-        test_player = db._test_data[0]
+        test_player = db._seed_data[0]
         payload = {
             'id': str(test_player.id),
             'first_name': test_player.first_name,
@@ -110,7 +110,7 @@ class MainTests(unittest.TestCase):
         self.assertEqual(HTTP_404_NOT_FOUND, resp.status_code)
 
     def test_delete_player(self):
-        test_player = db._test_data[0]
+        test_player = db._seed_data[0]
         resp = client.delete(f'/players/{test_player.id}')
         self.assertEqual(HTTP_200_OK, resp.status_code)
 

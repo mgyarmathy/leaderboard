@@ -23,28 +23,30 @@ def delete_player(player_id: uuid.UUID) -> None:
     if str(player_id) in store:
         del store[str(player_id)]
 
-_test_data = [
+_seed_data = [
     Player(
         id='804caed8-02f1-45fb-8413-ac1c2fc97883', 
-        first_name='Im',
-        last_name='Sung-jae',
-        score=14
+        first_name='Alice',
+        last_name='Geary',
+        score=96
     ),
     Player(
         id='3e5d5491-2233-432d-9f2c-92cd61b60335', 
-        first_name='Mackenzie',
-        last_name='Hughes',
-        score=17
+        first_name='John',
+        last_name='Junge',
+        score=96
     ),
     Player(
         id='f038624c-820a-4af6-a223-afca466162d2', 
-        first_name='Brendan',
-        last_name='Steele',
-        score=8
+        first_name='Rob',
+        last_name='Vera',
+        score=88
     )
 ]
 
-def _seed_test_data():
+def _seed_db():
     global store
-    for player in _test_data:
+    for player in _seed_data:
         store[str(player.id)] = player
+
+_seed_db()
