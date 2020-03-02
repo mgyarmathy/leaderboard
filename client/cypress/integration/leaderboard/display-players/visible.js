@@ -6,5 +6,5 @@ Given('I am on the leaderboard page', () => {
 });
 
 Then('I see the leaderboard', () => {
-  LeaderboardPage.expect().toSeeLeaderboard();
+  LeaderboardPage.getLeaderboardTable().should('be.visible');
 });
