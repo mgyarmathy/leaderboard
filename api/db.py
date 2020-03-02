@@ -1,3 +1,5 @@
+# a simple in-memory data store for player score data
+
 import typing
 import uuid
 
@@ -23,6 +25,7 @@ def delete_player(player_id: uuid.UUID) -> None:
     if str(player_id) in store:
         del store[str(player_id)]
 
+# start the app with seed data
 _seed_data = [
     Player(
         id='804caed8-02f1-45fb-8413-ac1c2fc97883', 

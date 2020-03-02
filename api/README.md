@@ -1,10 +1,13 @@
 # leaderboard-api
 
-A simple Python REST API server to accompany the leaderboard React application.
+A simple Python REST API server to store leaderboard information.
 
 ## API Documentation
 
-API Documentation is generated automatically by [FastAPI](https://github.com/tiangolo/fastapi) using [SwaggerUI](https://github.com/swagger-api/swagger-ui) and/or [ReDoc](https://github.com/Rebilly/ReDoc).
+API Documentation is generated automatically by 
+[FastAPI](https://github.com/tiangolo/fastapi) using 
+[SwaggerUI](https://github.com/swagger-api/swagger-ui) and/or 
+[ReDoc](https://github.com/Rebilly/ReDoc).
 
 Link to leaderboard-api docs: https://leaderboard-api.gyarmathy.me/docs
 

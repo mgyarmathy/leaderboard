@@ -18,7 +18,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cy:open:local": "CYPRESS_BASE_URL=http://localhost:3000 cypress open",
-    "cy:run:local": "CYPRESS_BASE_URL=http://localhost:3000 cypress run"
+    "cy:run:local": "CYPRESS_BASE_URL=http://localhost:3000 cypress run",
+    "cy:open:prod": "CYPRESS_BASE_URL=https://leaderboard.gyarmathy.me cypress open",
+    "cy:run:prod": "CYPRESS_BASE_URL=https://leaderboard.gyarmathy.me cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"

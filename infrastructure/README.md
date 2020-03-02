@@ -15,8 +15,9 @@ on S3 and is delivered through a CDN using
 **leaderboard-api**
 - The Python API server is built as a Docker container and runs on AWS 
 [ECS](https://aws.amazon.com/ecs/) with 
-[Fargate](https://aws.amazon.com/fargate/). The ECS container is fronted by
-an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), which handles routing and SSL-termination.
+[Fargate](https://aws.amazon.com/fargate/). The ECS container is fronted by an 
+[Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), 
+which handles routing and SSL-termination.
 - URL: https://leaderboard-api.gyarmathy.me
 
 ## Instructions
