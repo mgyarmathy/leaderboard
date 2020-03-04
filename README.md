@@ -6,10 +6,10 @@ development skills.
 Link: https://leaderboard.gyarmathy.me
 
 This project is divided into three parts:
-- [client/](client/README.md) - A React application that allows users to view, 
+- [client/](client/) - A React application that allows users to view, 
 add, edit, and delete player scores.
-- [api/](api/README.md) - A simple Python REST API server to store leaderboard 
+- [api/](api/) - A simple Python REST API server to store leaderboard 
 information.
-- [infrastructure/](infrastructure/README.md) - Terraform configuration files 
+- [infrastructure/](infrastructure/) - Terraform configuration files 
 used to provision resources for deploying the`leaderboard-client` React 
 application and `leaderboard-api` API server on AWS.
